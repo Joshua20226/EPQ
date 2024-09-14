@@ -1,0 +1,29 @@
+html,
+body {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-weight: 500 !important;
+}
+
+.navbar-tbl {
+  height: 70px;
+}
+
+.navbar-brand {
+  margin-left: 20px;
+}
+
+.page-header {
+  font-size: 25px;
+  color: white !important;
+}
+
+.page-button {
+    margin-right: 20px;
+}
+.spacer {
+  flex: 1 1 auto;
+}

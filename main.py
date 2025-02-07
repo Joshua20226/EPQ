@@ -1,7 +1,9 @@
 from dash import Dash, html, dcc
 import dash_bootstrap_components as dbc
 import os
+from components.tabs import tabs
 from components.navbar import navbar
+import flask
 
 app = Dash(__name__)
 server = app.server 
@@ -13,9 +15,14 @@ app.title = 'Shipping Dashboard'
 STATIC_PATH = os.path.join(os.path.dirname(
     os.path.abspath(__file__)), 'static')
 
+@app.server.route('/static/<resource>')
+def serve_static(resource):
+    return flask.send_from_directory(STATIC_PATH, resource)
+
 app.layout = html.Div(
     children=[
-        navbar
+        navbar, 
+        tabs
     ]
 )
 
@@ -39,4 +46,4 @@ app.index_string = """<!DOCTYPE html>
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True, host='192.168.0.158')
+    app.run_server(debug=True, host='localhost')

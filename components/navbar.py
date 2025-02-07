@@ -17,7 +17,7 @@ navbar = dbc.Navbar(
             ),
             dbc.Col(html.Div("Shipping Dashboard", className="page-header")),
             html.Span(className="spacer"),
-            dbc.Button("Learn More", className="page-button", color="light"),
+            dbc.Button("Learn More", className="page-button", color="light", href='/'),
         ],
         fluid=True,
     ),

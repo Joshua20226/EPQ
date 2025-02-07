@@ -8,16 +8,14 @@ navbar = dbc.Navbar(
                 # Use row and col to control vertical alignment of logo / brand
                 dbc.Row(
                     [
-                        dbc.Col(html.Img(src='/static/logo_processed.png',
+                        dbc.Col(html.Img(src='/static/logo.png',
                                 height="30px"), class_name='navbar-brand'),
+                        dbc.Col(html.Div("Shipping Dashboard", className="page-header")),
                     ],
                     align="center",
                 ),
-                style={"textDecoration": "none"},
+                # style={"textDecoration": "none"},
             ),
-            dbc.Col(html.Div("Shipping Dashboard", className="page-header")),
-            html.Span(className="spacer"),
-            dbc.Button("Learn More", className="page-button", color="light"),
         ],
         fluid=True,
     ),
